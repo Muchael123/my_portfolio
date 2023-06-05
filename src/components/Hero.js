@@ -6,7 +6,7 @@ function Hero(){
     <div className="relative  h-screen flex flex-col overflow-scroll mt-[50px] justify-center items-center md:flex-col">
      <BackroundCircles/>
     
-     <img className='relative mb-4 rounded-full h-32 w-32 mx-auto' src='https://c.ndtvimg.com/2023-06/3biptdi8_elon_625x300_04_June_23.jpg' alt=''/>
+     <img className='object-cover relative mb-4 rounded-full h-32 w-32 mx-auto' src='./maich.jpg' alt=''/>
      <h2 className='text-sm uppercase pb-2 text-gray-500 tracking-[15px]'>Software engineer</h2>
      <motion.div 
       initial= {
