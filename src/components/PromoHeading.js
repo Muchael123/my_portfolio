@@ -21,7 +21,8 @@ function Heading(){
                 {/* social icons twitter, linked-in,github,  */}
                 <SocialIcon 
                     className="cursor-pointer"
-                    network="facebook"
+                    network="github"
+                    url="https://github.com/Muchael123"
                     fgColor='#1eff00'
                     bgColor='transparent'
                 />
@@ -34,6 +35,13 @@ function Heading(){
                  <SocialIcon 
                     className="cursor-pointer"
                     network="linkedin"
+                    fgColor='#1eff00'
+                    bgColor='transparent'
+                />
+                 <SocialIcon 
+                    className="cursor-pointer"
+                    network="telegram"
+                    url="https://t.me/Maich_magodeh"
                     fgColor='#1eff00'
                     bgColor='transparent'
                 />
@@ -56,6 +64,7 @@ function Heading(){
             <SocialIcon 
                     className="flex"
                     network="email"
+                    url="mailto:mainamichael2849@gmail.com"
                     fgColor='#1eff00'
                     bgColor='transparent'
                 />
