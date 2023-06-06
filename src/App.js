@@ -1,16 +1,24 @@
 import Heading from './components/PromoHeading';
 import Hero from './components/Hero'
+import About from './components/About'
+import Experience from './components/experience'
 function App() {
   return (
 
   <div className="overflow-x-hidden bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0">
     <Heading />
     {/* hero */}
-    <section id="hero" className="snap-center">
+    <div id="hero" className="snap-start">
     <Hero />
-    </section>
+    </div>
     {/* about */}
+    <section id="about" className="snap-center">
+      <About />
+    </section>
     {/* experience */}
+    <section id="experience" className="snap-center">
+      <Experience/>
+    </section>
     {/* skills */}
   </div>
 
