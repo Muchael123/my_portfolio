@@ -2,7 +2,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 function ECard() {
   return (
-    <article className=" flex flex-col h-fit rounded-lg items-center space-y-7 flex-shrink-0 w-[450px] md:w-[450px] xl:w-[650px] snap-center bg-[#494949] p-5 xl:p-10 opacity-40 hover:opacity-100">
+    <article className=" flex flex-col h-fit rounded-lg items-center space-y-7 flex-shrink-0 w-[90%] md:w-[450px] xl:w-[650px] snap-center bg-[#494949] p-5 xl:p-10 opacity-40 hover:opacity-100">
         <motion.img
         initial={{y:-100,opacity:0}}
         whileInView={{opacity:1,y:0}}
