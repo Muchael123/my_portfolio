@@ -1,6 +1,7 @@
 import Heading from './components/PromoHeading';
 import Hero from './components/Hero'
 import About from './components/About'
+import Contact from './components/Contact'
 import Experience from './components/experience'
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
     <section id="experience" className="snap-center">
       <Experience/>
     </section>
-    {/* skills */}
+    {/* contact me */}
+    <section id='contact' className="snap-center">
+      <Contact/>
+    </section>
   </div>
 
   );

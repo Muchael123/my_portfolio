@@ -16,7 +16,7 @@ function About() {
       viewport={{once: true,}}
       
       src="./maich.jpg" alt="#"
-       className="-mb-20 mt-20 top-30 md:mb-10 top-42 xl:ml-0 self-center flex-shrink-0 w-56 h-56 rounded-full  object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[450px] xl:h-[450px]"/>
+       className="-mb-20 mt-20 top-30 md:mb-10 top-42 xl:ml-0 self-center flex-shrink-0 w-56 h-56 rounded-full  object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[450px] xl:h-[550px]"/>
       <motion.div 
        initial={{
         y:200, opacity:0

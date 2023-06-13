@@ -3,10 +3,13 @@ import {Typewriter } from 'react-simple-typewriter'
 import { motion } from "framer-motion"
 function Hero(){
   return (
-    <div className="relative  h-screen flex flex-col overflow-scroll mt-[50px] justify-center items-center md:flex-col">
-     <BackroundCircles/>
+    <div className="relative  h-screen flex  overflow-scroll mt-[50px] justify-center items-center md:flex-col">
+  
+      <BackroundCircles className="z-[-1]"/>
+     
     
-     <motion.img 
+     <div className='z-[999] flex flex-col items-center justify-center'>
+      <motion.img 
      initial={{y:-100, opacity:0}}
      animate={{y:0, opacity:1}}
      transition={{duration:1}}
@@ -52,7 +55,7 @@ function Hero(){
             delaySpeed={4000}
           />
     </span> <br/> 
-    <h1 className="text-[#1eff00]" >
+    <h1 className="text-[#1eff00] " >
     <Typewriter
             words={[ "I'm Mike",'A guy who loves coding', 'And coffee', 'And loves coding++', ]}
             loop
@@ -77,16 +80,18 @@ function Hero(){
      transition={{
       duration:1,
      }}
+     classsName="z-[77]"
      >
-            <a href="#about" className='px-2 py-5 uppercase md:px-6 border-[#242424] rounded-full text-sm tracking-widest cursor-pointer text-gray-500 transition-all hover:border-[#0ceb04]/40 hover:text-[#0ceb04]/40'>about</a>
+            <a href="#about" className='px-2 py-5 uppercase md:px-6 border-[#242424] rounded-full text-sm tracking-widest cursor-pointer text-gray-500 transition-all hover:border-[#0ceb04]/40 hover:text-[#0ceb04]/40 z-[888]'>about</a>
             <a href='#experience'>
-            <button className="px-2 py-2 uppercase md:px-6 border-[#242424] rounded-full text-sm tracking-widest text-gray-500 transition-all hover:border-[#0ceb04]/40 hover:text-[#0ceb04]/40">Experience</button></a>
+            <button className="px-2 py-2 uppercase md:px-6 border-[#242424] rounded-full text-sm tracking-widest text-gray-500 transition-all hover:border-[#0ceb04]/40 hover:text-[#0ceb04]/40 z-[888]">Experience</button></a>
             <a href="#skills">
             <button className="px-2 py-2 uppercase md:px-6 border-[#242424] rounded-full text-sm tracking-widest text-gray-500 transition-all hover:border-[#0ceb04]/40 hover:text-[#0ceb04]/40 
-            ">Skills</button></a>
-            <a href="#projects">
-            <button className="px-2 py-2 uppercase md:px-6 border-[#242424] rounded-full text-sm tracking-widest text-gray-500 transition-all hover:border-[#0ceb04]/40 hover:text-[#0ceb04]/40">Projects</button></a>
+            z-[888]">Skills</button></a>
+            <a href="#contact">
+            <button className="px-2 py-2 uppercase md:px-6 border-[#242424] rounded-full text-sm tracking-widest text-gray-500 transition-all hover:border-[#0ceb04]/40 hover:text-[#0ceb04]/40 z-[888]">Contact me</button></a>
           </motion.div>
+     </div>
     </div>
   );
 }
