@@ -30,7 +30,7 @@ function About() {
         <h4 className='text-4xl font-semibold'>Here is a <span className='underline decoration-[#1eff00]'>little </span> about me</h4>
         <p 
         
-        className='text-base pb-20'> Michael Maina is a versatile software engineer known for his innovative thinking and problem-solving abilities. He is an informaion Technology student currently in Masinde Muliro University of Science And technology. Michael has extensive experience in full-stack development, front-end frameworks, back-end languages and databases, Agile methodologies and has a proven track record of delivering high-quality software within tight deadlines and enjoys collaborating with cross-functional teams, fostering a positive and productive work environment. 
+        className='text-base pb-20'> Michael Maina is a versatile <span className='text-[#1eff00] font-mono'>software engineer</span> known for his innovative thinking and problem-solving abilities. He is an informaion Technology student currently in Masinde Muliro University of Science And technology. Michael has extensive experience in <span className='text-[#1eff00] font-mono '>full-stack development, front-end frameworks, back-end languages, databases, Agile methodologies</span> and has a proven track record of delivering high-quality software within tight deadlines and enjoys <span   className='text-[#1eff00] font-mono '>collaborating</span> with cross-functional teams, fostering a positive and productive work environment. 
 </p>
       </motion.div>
       </div>
