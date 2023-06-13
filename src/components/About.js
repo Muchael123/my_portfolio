@@ -30,15 +30,7 @@ function About() {
         <h4 className='text-4xl font-semibold'>Here is a <span className='underline decoration-[#1eff00]'>little </span> about me</h4>
         <p 
         
-        className='text-base pb-20'>Welcome to Parrot OS
-
-Copyright 2013-2020 Lorenzo Faletra palinuro@parrotsec.org
-Copyright 2020-2022 Parrot Security CIC  director@parrotsec.org
-
-
-This operating system is composed by several programs, each of them
-includes its own license. The GNU/GPL v3 license applies to those
-components developed by Parrot Security without an explicit license.
+        className='text-base pb-20'>Welcome to Michael Maina is a versatile software engineer known for his innovative thinking and problem-solving abilities. With a solid educational background in Computer Engineering and a passion for coding, he has developed expertise in multiple domains. Michael has extensive experience in full-stack development, proficiently working with front-end frameworks, back-end languages, and databases. He is skilled in Agile methodologies and has a proven track record of delivering high-quality software within tight deadlines. Michael enjoys collaborating with cross-functional teams, fostering a positive and productive work environment. His strong analytical skills and attention to detail ensure that his code
 </p>
       </motion.div>
       </div>
