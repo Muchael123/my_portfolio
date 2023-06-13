@@ -35,6 +35,7 @@ function Heading(){
                  <SocialIcon 
                     className="cursor-pointer"
                     network="linkedin"
+                    url="https://www.linkedin.com/in/michael-maina-087227235/"
                     fgColor='#1eff00'
                     bgColor='transparent'
                 />
