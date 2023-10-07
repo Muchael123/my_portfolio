@@ -7,7 +7,7 @@ function About() {
       <h3 className="absolute top-16 uppercase tracking-[20px] text-[#777474] text-2xl  ">About</h3>
         <motion.img 
       initial={{
-        x:-200,
+        x:-100,
       }}
       transition={{duration:1.5,}}
       whileInView={{
