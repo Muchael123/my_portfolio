@@ -62,7 +62,7 @@ export default function AnimatedTitle() {
   }, [frontEnd, backEnd, web]);
 
   return (
-    <div className="flex text-blue-100">
+    <div className="flex text-green-500">
       <motion.div variants={list} initial="hidden" animate={web}>
         <WriteWord word="Web" />
       </motion.div>

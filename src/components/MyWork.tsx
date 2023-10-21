@@ -16,10 +16,10 @@ interface Project {
 
 const projects: Project[] = [
   {
-    href: '/apps/realtor-simplified',
-    name: 'Realtor Simplified',
+    href: 'https://github.com/Muchael123/Auto-Nipange.git',
+    name: 'Auto-Nipange',
     full: true,
-    description: ' saas platform that enables realtors to deploy a professional website in minutes.',
+    description: ' An online app that automates airtime purchaes in groups.',
     image: { src: realtorSimplified },
   },
   {

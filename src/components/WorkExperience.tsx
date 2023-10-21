@@ -4,35 +4,17 @@ import { default as Image } from 'next/image';
 
 const experience = [
   {
-    title: 'Zenith Systems | Software Engineer.',
-    date: 'Oct 2022 - Present',
+    title: 'Auto-Nipange | Founder and Project Lead.',
+    date: 'Oct 2023 - Present',
     description: [
-      'Built an e-commerce site to sell courses online, by using React, Firebase Sass, Bootstrap, and Hotmart.',
-      'Developed swift IOS app from scratch and modified existing ones, by adding new screens, transitions and styling.',
+      'Currently building Auto-Nipange. A web Application that helps automate airtime purchases in organizations',
+      'Developed a React and Django Application from scratch with help Of @David Mwangi and @Joseph Omondi',
+      'Used React, Django,Postman Daraja API, Africas Talking',
       'Developed software by following the Agile Methodology',
     ],
-    image: { url: '/work/zenith.png', height: 34, width: 110, className: '' },
+    image: { url: '/work/AN.png', width: 110, height: 110, className: '' },
   },
-  {
-    title: 'BOHRIM BIM LEAN QUALITY | Full Stack Developer.',
-    date: 'Aug 2021 - Aug 2022',
-    description: [
-      'Worked on their B2B saas platform by communicating with users and making the appropriate changes to the platform, following the scrum methodology.',
-      'Added functionality by creating Strapi headless CMS endpoints.',
-      'Made changes to their application using React, Typescript, MaterialUI, CSS, AWS S3, PostgreSQL.',
-    ],
-    image: { url: '/work/bohrim.jpg', height: 96, width: 96, className: '' },
-  },
-  {
-    title: 'Loteria Monarca | Co-Founder.',
-    date: 'Jan 2020 - March 2021',
-    description: [
-      'Tasked with creating a web app to play ‘Loteria Mexicana’ online with the technology of my choosing.',
-      'Designed and built an initial demo with HTML, EJS, CSS, VanillaJS & JQuery, Bootstrap, ExpressJS, MongoDB, and Heroku.',
-      'After 2/3 months of success and after reaching 15k unique users, 100s of concurrent users on game night, and 12k USD NRR, I made the decision to transition the front end app over to SvelteJs and TailwindCSS for a better user experience and speed, and implemented Stripe and Paypal payment processing.',
-    ],
-    image: { url: '/work/loteria.png', height: 96, width: 144, className: 'bg-white' },
-  },
+ 
 ];
 
 export default function WorkExperience() {
@@ -95,7 +77,7 @@ function WorkRole({ children, title, date, image }: { children: React.ReactNode;
             />
           </div>
           <div>
-            <p className="font-semibold text-work_experience_orange text-lg">{title}</p>
+            <p className="font-semibold text-work_experience_green text-lg">{title}</p>
             <p className="@lg:hidden mt-2 text-white text-sm">{date}</p>
           </div>
         </div>

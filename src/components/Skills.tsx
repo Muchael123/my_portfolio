@@ -27,12 +27,12 @@ const skillsLogos = {
       image: '/logos/python-logo.png',
     },
     {
-      name: 'C#',
-      image: '/logos/csharp-logo.png',
+      name: 'C',
+      image: '/logos/C-logo.png',
     },
     {
-      name: 'Swift',
-      image: '/logos/swift-logo.png',
+      name: 'Java',
+      image: '/logos/Java-logo.png',
     },
     { name: '', image: '' },
     { name: '', image: '' },
@@ -70,18 +70,7 @@ const skillsLogos = {
       name: 'TailwindCSS',
       image: '/logos/tailwindcss-logo.jpg',
     },
-    {
-      name: 'Sass',
-      image: '/logos/sass-logo.png',
-    },
-    {
-      name: 'JQuery',
-      image: '/logos/jquery-logo.webp',
-    },
-    {
-      name: 'Svelte',
-      image: '/logos/svelte-logo.png',
-    },
+  
     {
       name: 'Bootstrap',
       image: '/logos/bootstrap-logo.svg',
@@ -90,10 +79,7 @@ const skillsLogos = {
       name: 'MaterialUI',
       image: '/logos/materialui-logo.png',
     },
-    {
-      name: 'LeafletJS',
-      image: '/logos/leaflet-logo.jpg',
-    },
+   
     { name: '', image: '' },
     { name: '', image: '' },
     { name: '', image: '' },
@@ -112,9 +98,18 @@ const skillsLogos = {
       image: '/logos/nestjs-logo.png',
     },
     {
+      name: 'Django',
+      image: '/logos/django.svg',
+    },
+    {
+      name: 'Flask',
+      image: '/logos/flask-logo.png',
+    },
+    {
       name: 'MongoDB',
       image: '/logos/mongodb-logo.webp',
     },
+    
     {
       name: 'PostgresSql',
       image: '/logos/postgres-logo.png',
@@ -131,43 +126,31 @@ const skillsLogos = {
       name: 'DigitalOcean',
       image: '/logos/digital-ocean-logo.svg',
     },
-    {
-      name: 'Stripe',
-      image: '/logos/stripe-logo.png',
-    },
+   
     {
       name: 'Paypal',
       image: '/logos/paypal-logo.png',
     },
-    {
-      name: 'MercadoPago',
-      image: '/logos/mercadopago-logo.webp',
-    },
-    {
-      name: 'awsS3',
-      image: '/logos/s3-logo.png',
-    },
-    {
-      name: 'StrapiCMS',
-      image: '/logos/strapi-cms-logo.png',
-    },
+    
     {
       name: 'SanityCMS',
       image: '/logos/sanity-cms-logo.png',
     },
-    {
-      name: 'DatoCMS',
-      image: '/logos/dato-cms-logo.png',
-    },
+    
   ],
   ['Tools' as string]: [
     {
       name: 'Git',
       image: '/logos/git-logo.png',
     },
+ 
     {
       name: 'Github',
       image: '/logos/github-logo.webp',
+    },
+    {
+      name: 'Atlassian Tools',
+      image: '/logos/Attlassian-logo.png',
     },
     { name: 'Docker', image: '/logos/docker-logo.png' },
     {
@@ -183,16 +166,16 @@ const skillsLogos = {
       image: '/logos/figma-logo.webp',
     },
     {
-      name: 'SocketIO',
-      image: '/logos/socketio-logo.webp',
+      name: 'Africa\'s Talking',
+      image: '/logos/AT.png',
     },
     {
-      name: 'Mailchimp',
-      image: '/logos/mailchimp-logo.webp',
+      name: 'Daraja',
+      image: '/logos/Daraja-logo.png',
     },
     {
-      name: 'Postmark',
-      image: '/logos/postmark-logo.png',
+      name: 'Postman',
+      image: '/logos/Postman-logo.webp',
     },
     { name: '', image: '' },
     { name: '', image: '' },

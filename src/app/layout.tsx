@@ -10,8 +10,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Alejandro Gomez Portfolio',
-  description: 'Alejandro Gomez Porfolio',
+  title: 'Michael Maina Portfolio',
+  description: 'Michael Maina Porfolio',
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

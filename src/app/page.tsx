@@ -36,7 +36,7 @@ const content: contentSection[] = [
       title: 'Work Experience',
       description: (
         <div>
-          <span className="text-work_experience_orange">Mid Engineer</span> with <span className="text-work_experience_orange">3.5+ years</span> of experience in the software industry
+          <span className="text-work_experience_orange">Mid Engineer</span> with <span className="text-work_experience_orange">2.5+ years</span> of experience in the software industry
         </div>
       ),
     },
@@ -90,7 +90,7 @@ export default function Index() {
           <div className="min-h-screen relative">
             <FadeIn className="max-w-5xl pt-40 md:pt-[20vh] 2xl:pt-[30vh]">
               <h1 className="font-display text-5xl font-medium tracking-tight text-white/90 [text-wrap:balance] sm:text-6xl">
-                Alejandro Gomez<span className="wave">👋</span>
+                Michael Maina<span className="wave">👋</span>
               </h1>
               <div className="flex mt-3 text-white/90">
                 Software Engineer / &#8205; <AnimatedTitle />
