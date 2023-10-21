@@ -2,7 +2,6 @@
 import { ExpandArrowLink, GlowCard } from '@/components';
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
-import { impulseux, leenithBorges, leenithIos, loteriaMonarca, realtorSimplified, sierraEcomaderas, template1 } from '../../public/projects/';
 
 interface Project {
   href: string;
@@ -22,7 +21,7 @@ export default function MyWork() {
   return (
     <div className="relative z-10 mt-20 @container">
       <div className="grid grid-cols-1 gap-8 pt-10 @3xl:grid-cols-2">
-        {projects.map((project) => (
+        {/* {projects.map((project) => (
           <GlowCard
             key={project.name}
             className={clsx('hover:shadow-my_work_yellow/90', project.full ? 'h-[60vh] @2xl:h-[50vh] @3xl:col-span-2' : 'h-[60vh] @3xl:col-span-1')}
@@ -45,7 +44,7 @@ export default function MyWork() {
               alt=""
             />
           </GlowCard>
-        ))}
+        ))} */}
       </div>
     </div>
   );
