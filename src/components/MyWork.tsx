@@ -15,55 +15,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    href: 'https://github.com/Muchael123/Auto-Nipange.git',
-    name: 'Auto-Nipange',
-    full: true,
-    description: ' An online app that automates airtime purchaes in groups.',
-    image: { src: realtorSimplified },
-  },
-  {
-    href: '/apps/loteria-monarca',
-    name: 'Loteria Monarca',
-    full: true,
-    description: ' online platform to register and play Loteria Mexicana.',
-    image: { src: loteriaMonarca },
-  },
-  {
-    href: '/apps/realtor-template-1',
-    name: 'Realtor Template',
-    full: false,
-    description: ' deployable template on the realtor simplified platform.',
-    image: { src: template1 },
-  },
-  {
-    href: '/apps/sierra-ecomanderas',
-    name: 'Sierra Ecomanderas',
-    full: false,
-    description: ' static website for a wood selling bussiness.',
-    image: { src: sierraEcomaderas },
-  },
-  {
-    href: '/apps/leenith-borges',
-    name: 'Leenith',
-    full: true,
-    description: ' e-commerce website to manage, and sell courses online.',
-    image: { src: leenithBorges },
-  },
-  {
-    href: '/apps/leenith-borges',
-    name: 'Leenith IOS',
-    full: false,
-    description: ' ios app to access and buy courses.',
-    image: { src: leenithIos },
-  },
-  {
-    href: '/apps/impulseux',
-    name: 'ImpulseUX',
-    full: false,
-    description: ' static website for design and development agency.',
-    image: { src: impulseux },
-  },
+
 ];
 
 export default function MyWork() {
