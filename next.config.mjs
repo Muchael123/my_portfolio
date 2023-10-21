@@ -21,7 +21,6 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-  disableExperimentalFeaturesWarning: true
 };
 
 export default withMDX(nextConfig);
