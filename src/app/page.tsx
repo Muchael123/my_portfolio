@@ -2,7 +2,7 @@ import { AboutMe, AnimatedTitle, Border, Container, FadeIn, GridPattern, MyWork,
 import { Archive, BookOpen, BriefCase } from '@/icons';
 
 export const metadata = {
-  title: 'Alejandro Gomez',
+  title: 'Michael Maina',
   description: 'My personal portfolio.',
 };
 
@@ -95,7 +95,7 @@ export default function Index() {
               <div className="flex mt-3 text-white/90">
                 Software Engineer / &#8205; <AnimatedTitle />
               </div>
-              <p className="max-w-3xl">26 yo software engineer with a B.S. in Computer Science and Technology with experience in Front-End and Back-End technologies.</p>
+              <p className="max-w-3xl text-lg">20 yo software engineer with  with experience in Front-End and Back-End technologies.</p>
             </FadeIn>
 
             <Socials />

@@ -1,17 +1,17 @@
 import { AppSolution, Border, Button, Container, FadeIn, FadeInStagger, Section } from '@/components';
 import Image from 'next/image';
-import { impulseux } from '../../../../public/projects'
+import {  AN } from '../../../../public/projects'
 
 export const appData = {
-  industry: 'Web Agency',
-  title: 'ImpulseUX',
-  description: 'Static website for a web agency, located in Mexico. Mainly used to display the products and services offered by the company.',
-  image: impulseux,
-  date: '2021-06',
-  service: 'Static Website',
-  url: 'https://impulseux.com/',
-  pathname: '/apps/impulseux',
-  framework: 'next',
+  industry: 'E-commerce',
+  title: 'Auto-Nipange',
+  description: 'Auto-nipange is an Online app that automates Airtime purchases for organizations',
+  image: AN,
+  date: '2023-01',
+  service: 'E-commerce',
+  url: '#',
+  pathname: '/apps/auto-nipange',
+  framework: 'react',
 };
 
 export const sections = [
@@ -28,28 +28,32 @@ export const metadata = {
 
 export const technologies = [
   {
-    name: 'HTML5',
-    image: '/logos/html5-logo.png',
-  },
-  {
-    name: 'CSS3',
-    image: '/logos/css-logo.png',
-  },
-  {
     name: 'JavaScript',
     image: '/logos/js-logo.png',
   },
   {
-    name: 'ReactJS',
-    image: '/logos/react-logo.png',
+    name: 'HTML5',
+    image: '/logos/html5-logo.png',
+  },
+  {
+    name: 'TailwindCSS',
+    image: '/logos/tailwindcss-logo.jpg',
   },
   {
     name: 'NextJS',
     image: '/logos/nextjs-logo.png',
   },
   {
-    name: 'TailwindCSS',
-    image: '/logos/tailwindcss-logo.jpg',
+    name: 'Firebase',
+    image: '/logos/firebase-logo.jpg',
+  },
+  {
+    name: 'Figma',
+    image: '/logos/figma-logo.webp',
+  },
+  {
+    name: 'Africa\'s Talking',
+    image: '/logos/AT.png',
   },
   {
     name: 'Git',
@@ -59,10 +63,6 @@ export const technologies = [
     name: 'Github',
     image: '/logos/github-logo.webp',
   },
-  {
-    name: 'Postmark',
-    image: '/logos/postmark-logo.png',
-  },
 ];
 
 <Container>
@@ -70,33 +70,31 @@ export const technologies = [
 <Border className="my-8" />
 
   <Section id="challenge">
-    ## Challenge
+    ## Problem
 
-    Translate a Figma design into a static website for a web agency.
+   Mr Bidii is a principal in a secondary school in Kenya. He wishes to buy his  stuff airtime after a certain duration.\nHe plans to buy the bursar and senior teachers amounts more often than the other stuff 
+   This is too tiresome and even forgets to buy airtime for other stuff at times.\n
+   Auto-Nipange is here for such problems. It should:
 
-    -Display the products and services offered by the company.
-    
-    -Allow the user to contact the company.
+    -Master Admin should be able to create new group for members.
+
+    -Master Admin should be able to see balance in the dashboard.
+
+    -Master Admin should be able to add/delete members from any group created.
+
+    -Master Admin should be able to pay using an STK push
+
+    -Send Emails on signup, and messages upon a successful plan chosen.
 
   </Section>
 
 <Border className="my-8" />
 
-<Section id="solution">
-
-## Solution
-
-<AppSolution href={appData.url}>
-  
-</AppSolution>
-
-</Section>
-
 <Border className="my-8" />
 
 <Section id="technologies">
 
-## Technologies
+## Solution Technologies
 
 <FadeInStagger className="flex gap-4 mt-6 flex-wrap" faster once>
   {technologies.map((tech) => (

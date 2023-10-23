@@ -11,6 +11,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Michael Maina Portfolio',
+  
   description: 'Michael Maina Porfolio',
 };
 
