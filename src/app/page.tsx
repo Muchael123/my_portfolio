@@ -95,7 +95,7 @@ export default function Index() {
               <div className="flex mt-3 text-white/90">
                 Software Engineer / &#8205; <AnimatedTitle />
               </div>
-              <p className="max-w-3xl text-lg">20 yo software engineer with  with experience in Front-End and Back-End technologies.</p>
+              <p className="max-w-3xl text-lg">I want to make art and develop wonders that hundres of thousands will come see <br/> and I wan to make it with the funnest, most talented team of my own.</p>
             </FadeIn>
 
             <Socials />
