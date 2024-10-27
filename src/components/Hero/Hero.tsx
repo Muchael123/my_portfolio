@@ -8,7 +8,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 function Hero() {
   return (
     <div
-      className={`flex flex-col-reverse w-full  mb-20 justify-center items-center lg:flex-row lg:justify-between lg:mt-[2%] mt-[40vh] py-5 px-4 md:py-3 h-[90vh]`}
+      className={`flex flex-col-reverse w-full  mb-20 justify-center items-center lg:flex-row lg:justify-between lg:mt-[2%] mt-[20vh] py-5 px-4 md:py-3 h-[90vh]`}
       id="Home"
     >
       <motion.div
