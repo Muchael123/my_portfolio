@@ -1,27 +1,36 @@
-import type { Config } from 'tailwindcss';
-
-const config: Config = {
-  content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        "profile-animate": "profileAnimate 8s ease-in-out infinite 1s",
+      },
+      keyframes: {
+        profileAnimate: {
+          "0%": {
+            borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+          },
+          "50%": {
+            borderRadius: "30% 60% 70% 40% / 50% 60% 30%",
+          },
+          "100%": {
+            borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+          },
+        },
+      },
       colors: {
-        dark_bg: '#1E2336',
-        dark_border: '#1B1E2E',
-        about_me_green: '#7ee787',
-        work_experience_green: '#09A310',
-        skills_purple: '#939aff',
-        my_work_yellow: '#09A310',
-        white: '#FFF',
-        'red-500': '#E51400',
-        'gray-200': '#292E42',
-        'gray-300': '#36394A',
-        'gray-500': '#A9B1D6',
-        'blue-100': '#3DB9C9',
-        'blue-300': '#3D59A1',
-        'blue-800': '#282E44',
+        dark: {
+          background: "#1a1a1a",
+          text: "#ffffff",
+        },
+        light: {
+          background: "#ffffff",
+          text: "#000000",
+        },
       },
     },
   },
-  plugins: [require('@tailwindcss/container-queries')],
+
+  plugins: [],
 };
-export default config;
