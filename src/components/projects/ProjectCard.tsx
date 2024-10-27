@@ -7,6 +7,8 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { DiDjango } from "react-icons/di";
 import { SiClerk } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
+import { Theme, ThemeContext } from "../../context/ThemeContext";
+import { useContext } from "react";
 
 type ProjectCardProps = {
   title: string;
@@ -36,9 +38,13 @@ function ProjectCard({
   link,
   github,
 }: ProjectCardProps) {
+  const { theme } = useContext(ThemeContext); // Get the current theme from context
+
   return (
     <motion.div
-      className="flex flex-col bg-white rounded-lg shadow-lg p-4"
+      className={`flex flex-col rounded-lg shadow-lg p-4 ${
+        theme === Theme.Dark ? "bg-gray-900" : "bg-white"
+      }`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
@@ -48,12 +54,30 @@ function ProjectCard({
         alt={title}
         className="w-full h-48 object-cover rounded-t-lg"
       />
-      <h3 className="font-semibold text-lg mt-2">{title}</h3>
-      <p className="text-gray-600 mt-1">{description}</p>
+      <h3
+        className={`font-semibold text-lg mt-2 ${
+          theme === Theme.Dark ? "text-white" : "text-gray-900"
+        }`}
+      >
+        {title}
+      </h3>
+      <p
+        className={`mt-1 ${
+          theme === Theme.Dark ? "text-gray-300" : "text-gray-600"
+        }`}
+      >
+        {description}
+      </p>
 
       {/* Tech Stack Section */}
       <div className="mt-2">
-        <h4 className="font-semibold">Tech Stack:</h4>
+        <h4
+          className={`font-semibold ${
+            theme === Theme.Dark ? "text-white" : "text-gray-900"
+          }`}
+        >
+          Tech Stack:
+        </h4>
         <div className="flex flex-wrap gap-2 mt-1">
           {stack.map((tech) => (
             <div
