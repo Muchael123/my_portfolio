@@ -37,15 +37,21 @@ function ProjectCard({
   github,
 }: ProjectCardProps) {
   return (
-    <motion.div className="relative flex flex-col bg-white rounded-lg shadow-lg p-4">
+    <motion.div
+      className="flex flex-col bg-white rounded-lg shadow-lg p-4"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <img
         src={image}
         alt={title}
-        className="w-full h-48 object-cover rounded-lg"
+        className="w-full h-48 object-cover rounded-t-lg"
       />
       <h3 className="font-semibold text-lg mt-2">{title}</h3>
       <p className="text-gray-600 mt-1">{description}</p>
 
+      {/* Tech Stack Section */}
       <div className="mt-2">
         <h4 className="font-semibold">Tech Stack:</h4>
         <div className="flex flex-wrap gap-2 mt-1">
