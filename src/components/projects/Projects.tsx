@@ -1,4 +1,4 @@
-import { desc, g, image } from "framer-motion/client";
+
 import Hr from "../common/Hr";
 import Subtitles from "../common/Subtitles";
 import { motion } from "framer-motion";
@@ -38,7 +38,8 @@ function Projects() {
           Link: "https://github.com/Muchael123/SwiftUsalama",
         github: "https://github.com/Muchael123/SwiftUsalama"
       },
-    ];
+  ];
+  console.log(MyProjects);
   return (
     <div
       className={`flex  w-full mt-[4vh] flex-col   py-5 px-4 md:py-3 min-h-[90vh]`}
