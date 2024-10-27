@@ -63,7 +63,7 @@ function Experience() {
       <Hr />
       <Subtitles text="Experience" />
       <div className="flex flex-col md:flex-wrap justify-between">
-        <div className="w-full flex flex-col md:flex-row flex-wrap gap-4 mt-3 py-3">
+        <div className="w-full flex flex-col md:flex-row flex-wrap md:justify-start justify-center  gap-4 mt-3 py-3">
           {myWorks.map((work, index) => (
             <WorkCard key={index} {...work} />
             ))}
