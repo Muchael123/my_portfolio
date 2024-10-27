@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function About() {
   return (
     <div
-      className="flex w-full z-0 mt-[4vh] flex-col py-5 px-4 md:py-3 h-[90vh] relative"
+      className="flex w-full z-0 mt-[4vh] flex-col py-5 px-4 md:py-3 relative"
       id="about"
     >
       <Hr />
