@@ -15,7 +15,7 @@ function WorkCard(work: JobExperienceProps) {
   const [isWorkDetailsOpen, setIsWorkDetailsOpen] = useState(false);
 
   return (
-    <div className="relative flex-1 border-gray-300 border-[1px] p-4 max-w-[200px] h-[300px] flex flex-col justify-between">
+    <div className="relative flex-1 border-gray-300 border-[1px] w-full p-4 md:max-w-[200px] h-[300px] flex flex-col justify-between">
       {/* Modal with Framer Motion */}
       <AnimatePresence>
         {isWorkDetailsOpen && (
