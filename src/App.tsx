@@ -20,7 +20,7 @@ function App() {
         }`}
       >
         <Header />
-        <div className="px-4  max-w-[858px]">
+        <div className="px-4  max-w-[858px] w-full">
           <Hero />
           <About />
           <Experience />

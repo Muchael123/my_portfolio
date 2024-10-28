@@ -28,7 +28,7 @@ function Education() {
       <Hr />
       <Subtitles text="Qualifications" />
       <div className="flex flex-col md:flex-row gap-3 justify-center mt-3">
-        <div className="w-fit flex flex-col h-[400px] justify-start">
+        <div className="w-fit flex flex-col h-fit md:h-[400px] justify-start">
           <h3 className="text-xl text-green-500 mb-3 font-semibold inline-flex gap-3 w-full justify-center mt-5 items-center">
             <span className="">
               <FcGraduationCap />
@@ -46,7 +46,7 @@ function Education() {
             Certifications
           </h3>
           {MyCertification.map((cert, index) => (
-            <Certification key={index} {...cert} />
+            <Certification key={index} {...cert} i={index} />
           ))}
         </div>
           </div>

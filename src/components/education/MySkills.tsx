@@ -3,8 +3,11 @@ import { FaHtml5, FaJs, FaReact, FaGithub, FaGit } from "react-icons/fa";
 import { IoLogoCss3, IoLogoNodejs, IoLogoFirebase } from "react-icons/io5";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
+import { useMediaQuery } from "react-responsive";
 
 function MySkills() {
+  const isMobileOrTablet = useMediaQuery({ query: "(max-width: 768px)" });
+
   const skills = [
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "CSS", icon: <IoLogoCss3 /> },
@@ -20,10 +23,10 @@ function MySkills() {
 
   return (
     <div className="w-full">
-      <p className="text-center mb-3  italic font-semibold">
+      <p className="text-center mb-3 italic font-semibold">
         Skills I have gained over the years
       </p>
-      <Marquee gradient={true} speed={60}>
+      <Marquee gradient={!isMobileOrTablet} speed={60}>
         {skills.map((skill, index) => (
           <div
             key={index}
