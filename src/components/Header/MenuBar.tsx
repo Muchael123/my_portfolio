@@ -18,7 +18,7 @@ export default function MenuBar() {
       { name: "about", link: "#about" },
       { name: "Experience", link: "#experience" },
       { name: "projects", link: "#projects" },
-      { name: "education", link: "#education" },
+      { name: "Qualifications", link: "#qualifications" },
       { name: "contact", link: "#contact" },
     ];
   return (

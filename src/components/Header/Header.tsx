@@ -16,12 +16,12 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="w-screen fixed top-5 flex z-[999] justify-center ">
+    <div className="w-screen fixed top-0 md:top-5 flex z-[999] justify-center ">
       <header
         className={`transition-all max-w-[858px] relative bg-green-500/10 rounded-[12px]  backdrop-blur-md gap-7 flex flex-row justify-between items-center duration-250 ease-in-out p-4`}
       >
         <motion.div
-          className="top-0 left-0 right-0 h-[5px]  bg-green-500 transform origin-left"
+          className="top-0 left-0 right-0 h-[5px]  bg-green-500 transform origin-left absolute"
           style={{ scaleX: scrollYProgress }}
         />
         <a href="/">

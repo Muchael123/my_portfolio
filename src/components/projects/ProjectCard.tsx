@@ -15,8 +15,9 @@ type ProjectCardProps = {
   description: string;
   stack: string[];
   image: string;
-  link: string;
-  github: string;
+  link?: string;
+  github?: string;
+  type?: "web" | "mobile" | string;
 };
 
 const stackIcons: { [key: string]: JSX.Element } = {
@@ -38,7 +39,7 @@ function ProjectCard({
   link,
   github,
 }: ProjectCardProps) {
-  const { theme } = useContext(ThemeContext); // Get the current theme from context
+  const { theme } = useContext(ThemeContext);
 
   return (
     <motion.div
@@ -69,7 +70,6 @@ function ProjectCard({
         {description}
       </p>
 
-      {/* Tech Stack Section */}
       <div className="mt-2">
         <h4
           className={`font-semibold ${

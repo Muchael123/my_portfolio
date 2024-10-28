@@ -57,7 +57,7 @@ function Experience() {
   ];
   return (
     <div
-      className={`flex  w-full mt-[4vh] flex-col   py-5 px-4 md:py-3 min-h-[90vh]`}
+      className={`flex  w-full mt-[4vh] flex-col   py-5 px-4 md:py-3 h-fit`}
       id="experience"
     >
       <Hr />
