@@ -14,14 +14,14 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div
-        className={`flex min-h-screen items-center w-screen flex-col ${
+        className={`flex min-h-screen items-center w-full overflow-x-clip flex-col ${
           theme === Theme.Dark
             ? "bg-dark-background text-dark-text"
             : "bg-light-background text-gray-800"
         }`}
       >
         <Header />
-        <div className="px-4  max-w-[858px] w-full">
+        <div className="px-4  max-w-[858px] w-full oveflow-x-clip">
           <Hero />
           <About />
           <Experience />
