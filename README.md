@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Michael Maina's Portfolio**! This is my personal portfolio website, built with React (Vite + Tailwindcss). It showcases my skills, projects, and accomplishments. Feel free to explore!
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started, follow these steps:
 
-## Expanding the ESLint configuration
+### 1. Clone the Repository
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Clone this repository to your local machine using the following command:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/Muchael123/my_portfolio.git
 ```
+Before proceeding, make sure you have [Node.js](https://nodejs.org/) installed on your system. If not, you can download and install it from the [official website](https://nodejs.org/).
+### 2. Install Dependencies
+You can use either npm to install the necessary dependencies:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```npm
+npm i
 ```
+or use [pnpm]([https://nodejs.org/](https://pnpm.io)
+
+```pnpm
+pnpm i
+```
+### 3. Run the Application
+Once the dependencies are installed, you can start the application using:
+```npm
+npm run dev
+```
+## View the Site
+You can also visit the live version of the portfolio at:
+[This Site](https://michael-maina.me)
+
+
