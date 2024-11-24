@@ -7,6 +7,7 @@ import Experience from "./components/experience/Experience";
 import Projects from "./components/projects/Projects";
 import Education from "./components/education/Education";
 import Contact from "./components/contact/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState(Theme.Light);
@@ -28,6 +29,9 @@ function App() {
           <Education />
           <Contact />
         </div>
+      </div>
+      <div className="w-full relative pb-20">
+      <Footer />
       </div>
     </ThemeContext.Provider>
   );
