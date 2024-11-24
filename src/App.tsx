@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div
-        className={`flex min-h-screen w-screen flex-col items-center ${
+        className={`flex min-h-screen w-screen flex-col ${
           theme === Theme.Dark
             ? "bg-dark-background text-dark-text"
             : "bg-light-background text-gray-800"
