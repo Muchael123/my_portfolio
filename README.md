@@ -20,7 +20,7 @@ You can use either npm to install the necessary dependencies:
 ```npm
 npm i
 ```
-or use [pnpm]([https://nodejs.org/](https://pnpm.io)
+or use [pnpm](https://pnpm.io)
 
 ```pnpm
 pnpm i
