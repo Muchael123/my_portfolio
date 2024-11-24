@@ -5,6 +5,8 @@ import Certification from "./Certification";
 import SchoolCard from "./SchoolCard";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { FcGraduationCap } from "react-icons/fc";
+
+import Interests from "./Interests";
 import MySkills from "./MySkills";
 
 function Education() {
@@ -51,6 +53,7 @@ function Education() {
         </div>
           </div>
           <MySkills />
+          <Interests />
     </div>
   );
 }

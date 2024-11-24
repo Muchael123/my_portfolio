@@ -5,6 +5,7 @@ import MySocials from "./MySocials";
 import { motion } from "framer-motion";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 
+
 function Hero() {
   return (
     <div

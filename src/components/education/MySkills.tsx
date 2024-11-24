@@ -28,7 +28,7 @@ const {theme} = useTheme()
       <p className="text-center mb-3 italic font-semibold">
         Skills I have gained over the years
       </p>
-      <Marquee gradient={!isMobileOrTablet} speed={60}>
+      <Marquee gradient={!isMobileOrTablet} gradientColor={theme === Theme.Light? "white" : "#101010"} speed={60}>
         {skills.map((skill, index) => (
           <div
             key={index}
