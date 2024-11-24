@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           style={{ scaleX: scrollYProgress }}
         />
         <a href="/">
-          <h1 className="text-2xl text-green-500 font-semibold">
+          <h1 className="md:text-2xl text-xl text-green-500 font-semibold">
             {"<"}Michael <span className="text-yellow-500">Maina</span> {" />"}
           </h1>
         </a>
