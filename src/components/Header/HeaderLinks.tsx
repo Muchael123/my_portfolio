@@ -11,7 +11,7 @@ function HeaderLinks({theme}: any) {
         {name: 'contact', link: '#contact'}
     ]
   return (
-    <div className={`lg:flex hidden space-x-3 text-gray-800 divide-x-2 ${theme === Theme.Dark ? 'text-gray-200 ': ''}`}>
+    <div className={`lg:flex hidden space-x-3 text-gray-800 divide-x-2 ${theme === Theme.Dark ? 'text-white': ''}`}>
       {links.map(
         (
           { name, link } // Corrected destructuring

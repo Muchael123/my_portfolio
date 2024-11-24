@@ -10,9 +10,9 @@ const itemVariants: Variants = {
   },
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
-
 export default function MenuBar() {
     const [isOpen, setIsOpen] = useState(false);
+    
     const links = [
       { name: "home", link: "#Home" },
       { name: "about", link: "#about" },
