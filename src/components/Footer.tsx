@@ -10,7 +10,7 @@ function Footer() {
     >
       <hr className={`${theme === Theme.Dark ? 'border-gray-600' : 'border-gray-300'} my-4`} />
       <p className="text-sm">
-        &copy; 2024 <span className="font-semibold">@C</span> Made with <span className="text-red-500">♥</span> by Muchael123
+        &copy; Made with <span className="text-red-500">♥</span> by Muchael123
       </p>
     </footer>
   );
