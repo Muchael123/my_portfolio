@@ -1,49 +1,76 @@
 
 import { useEffect } from "react";
 
+interface Node {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+}
 
+interface NParams {
+  phase?: number;
+  offset?: number;
+  frequency?: number;
+  amplitude?: number;
+  spring?: number;
+}
 
 const useCanvasCursor = () => {
-  function n(e) {
-    this.init(e || {});
-  }
-  n.prototype = {
-    init: function (e) {
+  class n {
+    phase!: number;
+    offset!: number;
+    frequency!: number;
+    amplitude!: number;
+
+    constructor(e: NParams) {
+      this.init(e || {});
+    }
+
+    init(e: NParams) {
       this.phase = e.phase || 0;
       this.offset = e.offset || 0;
       this.frequency = e.frequency || 0.001;
       this.amplitude = e.amplitude || 1;
-    },
-    update: function () {
-      return (this.phase += this.frequency), (e = this.offset + Math.sin(this.phase) * this.amplitude);
-    },
-    value: function () {
-      return e;
-    },
-  };
+    }
 
-  function Line(e) {
-    this.init(e || {});
+    update() {
+      return (this.phase += this.frequency), (e = this.offset + Math.sin(this.phase) * this.amplitude);
+    }
+
+    value() {
+      return e;
+    }
   }
 
-  Line.prototype = {
-    init: function (e) {
-      this.spring = e.spring + 0.1 * Math.random() - 0.02;
+  class Line {
+    spring: number;
+    friction: number;
+    nodes: Node[];
+
+    constructor(e: NParams) {
+      this.spring = 0;
+      this.friction = 0;
+      this.nodes = [];
+      this.init(e || {});
+    }
+
+    init(e: NParams) {
+      this.spring = (e.spring ?? 0) + 0.1 * Math.random() - 0.02;
       this.friction = E.friction + 0.01 * Math.random() - 0.002;
       this.nodes = [];
-      for (var t, n = 0; n < E.size; n++) {
-        t = new Node();
-        t.x = pos.x;
-        t.y = pos.y;
+      for (let t: Node, n = 0; n < E.size; n++) {
+        t = { x: pos.x, y: pos.y, vx: 0, vy: 0 };
         this.nodes.push(t);
       }
-    },
-    update: function () {
-      var e = this.spring,
+    }
+
+    update() {
+      let e = this.spring,
         t = this.nodes[0];
       t.vx += (pos.x - t.x) * e;
       t.vy += (pos.y - t.y) * e;
-      for (var n, i = 0, a = this.nodes.length; i < a; i++)
+      for (let n, i = 0, a = this.nodes.length; i < a; i++)
         (t = this.nodes[i]),
           0 < i &&
             ((n = this.nodes[i - 1]),
@@ -56,15 +83,18 @@ const useCanvasCursor = () => {
           (t.x += t.vx),
           (t.y += t.vy),
           (e *= E.tension);
-    },
-    draw: function () {
-      var e,
+    }
+
+    draw() {
+      let e,
         t,
         n = this.nodes[0].x,
         i = this.nodes[0].y;
       ctx.beginPath();
       ctx.moveTo(n, i);
-      for (var a = 1, o = this.nodes.length - 2; a < o; a++) {
+      let a;
+      let o = this.nodes.length - 2;
+      for (a = 1; a < o; a++) {
         e = this.nodes[a];
         t = this.nodes[a + 1];
         n = 0.5 * (e.x + t.x);
@@ -76,31 +106,38 @@ const useCanvasCursor = () => {
       ctx.quadraticCurveTo(e.x, e.y, t.x, t.y);
       ctx.stroke();
       ctx.closePath();
-    },
-  };
+    }
+  }
 
-  function onMousemove(e) {
+  function onMousemove(e: MouseEvent | TouchEvent) {
     function o() {
       lines = [];
-      for (var e = 0; e < E.trails; e++) lines.push(new Line({ spring: 0.4 + (e / E.trails) * 0.025 }));
+      for (let e = 0; e < E.trails; e++) lines.push(new Line({ spring: 0.4 + (e / E.trails) * 0.025 }));
     }
-    function c(e) {
-      e.touches
-        ? ((pos.x = e.touches[0].pageX), (pos.y = e.touches[0].pageY))
-        : ((pos.x = e.clientX), (pos.y = e.clientY)),
-        e.preventDefault();
+    function c(e: MouseEvent | TouchEvent) {
+      if ("touches" in e) {
+        pos.x = e.touches[0].pageX;
+        pos.y = e.touches[0].pageY;
+      } else {
+        pos.x = e.clientX;
+        pos.y = e.clientY;
+      }
+      e.preventDefault();
     }
-    function l(e) {
-      1 == e.touches.length && ((pos.x = e.touches[0].pageX), (pos.y = e.touches[0].pageY));
+    function l(e: TouchEvent) {
+      if (e.touches.length === 1) {
+        pos.x = e.touches[0].pageX;
+        pos.y = e.touches[0].pageY;
+      }
     }
-    document.removeEventListener("mousemove", onMousemove),
-      document.removeEventListener("touchstart", onMousemove),
-      document.addEventListener("mousemove", c),
-      document.addEventListener("touchmove", c),
-      document.addEventListener("touchstart", l),
-      c(e),
-      o(),
-      render();
+    document.removeEventListener("mousemove", onMousemove);
+    document.removeEventListener("touchstart", onMousemove);
+    document.addEventListener("mousemove", c);
+    document.addEventListener("touchmove", c);
+    document.addEventListener("touchstart", l);
+    c(e);
+    o();
+    render();
   }
 
   function render() {
@@ -110,8 +147,9 @@ const useCanvasCursor = () => {
       ctx.globalCompositeOperation = "lighter";
       ctx.strokeStyle = "hsla(" + Math.round(f.update()) + ",50%,50%,0.2)";
       ctx.lineWidth = 1;
-      for (var e, t = 0; t < E.trails; t++) {
-        (e = lines[t]).update();
+      for (let e, t = 0; t < E.trails; t++) {
+        e = lines[t];
+        e.update();
         e.draw();
       }
       ctx.frame++;
@@ -124,28 +162,35 @@ const useCanvasCursor = () => {
     ctx.canvas.height = window.innerHeight;
   }
 
-  var ctx,
-    f,
-    e = 0,
-    pos = {},
-    lines = [],
-    E = {
-      debug: true,
-      friction: 0.5,
-      trails: 20,
-      size: 50,
-      dampening: 0.25,
-      tension: 0.98,
-    };
-  function Node() {
-    this.x = 0;
-    this.y = 0;
-    this.vy = 0;
-    this.vx = 0;
+  interface Pos {
+    x: number;
+    y: number;
   }
 
+  interface Ctx extends CanvasRenderingContext2D {
+    running: boolean;
+    frame: number;
+  }
+
+  let ctx: Ctx;
+  let f: InstanceType<typeof n>;
+  let e: number = 0;
+  let pos: Pos = { x: 0, y: 0 };
+  let lines: Array<InstanceType<typeof Line>> = [];
+  let E = {
+    debug: true,
+    friction: 0.5,
+    trails: 20,
+    size: 50,
+    dampening: 0.25,
+    tension: 0.98,
+  };
+
   const renderCanvas = function () {
-    ctx = document.getElementById("canvas").getContext("2d");
+    const canvas = document.getElementById("canvas") as HTMLCanvasElement | null;
+    if (canvas) {
+      ctx = canvas.getContext("2d") as Ctx;
+    }
     ctx.running = true;
     ctx.frame = 1;
     f = new n({
