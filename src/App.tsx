@@ -8,6 +8,7 @@ import Projects from "./components/projects/Projects";
 import Education from "./components/education/Education";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/Footer";
+import CanvasCursor from "./components/cursor/CanvasCursor";
 
 function App() {
   const [theme, setTheme] = useState(Theme.Light);
@@ -24,6 +25,7 @@ function App() {
         <div className="px-4  max-w-[858px] w-full oveflow-x-clip">
           <Hero />
           <About />
+          <CanvasCursor />
           <Experience />
           <Projects />
           <Education />
