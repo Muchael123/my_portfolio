@@ -26,12 +26,13 @@ function Projects() {
     "title": "Mwalimu-Smart",
     "description": "A smart platform for teachers to manage lessons, assignments, and student performance",
     "stack": [
-      "React",
+      "React Native",
       "Node.js",
       "Express",
       "MongoDB",
       "TailwindCSS",
-      "JWT Authentication"
+      "JWT Authentication",
+      "Clerk"
     ],
     "image": "/images/sc.jpeg",
     "github": "https://github.com/Muchael123/mwalimu-smart",
