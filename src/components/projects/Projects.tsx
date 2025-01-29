@@ -22,6 +22,21 @@ function Projects() {
       github: "https://github.com/Muchael123/story-yetu",
       type: "web",
     },
+     {
+    "title": "Mwalimu-Smart",
+    "description": "A smart platform for teachers to manage lessons, assignments, and student performance",
+    "stack": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "TailwindCSS",
+      "JWT Authentication"
+    ],
+    "image": "/images/sc.jpeg",
+    "github": "https://github.com/Muchael123/mwalimu-smart",
+    "type": "web"
+  },
     {
       title: "tumeiget",
       description:
